@@ -1,8 +1,11 @@
 # Malcolm M.
 
-# About this project
+## About this project
 
-- I wanted to create this to begin robo-dialling back the scammer calls
+- to create a virtual environment with all the dependencies involved, I used the command `virtualenv [name]`
+- run `source [name]/bin/activate`
+- next, run `pip install twilio==5.7.0` to install the twilio pkgs
+- I wanted to create this to begin robo-dialling back the scam calls
 
 # Fixes
 
@@ -16,9 +19,24 @@
 ```
 
 # Instructions to run:
-```
+
+You will want a virtual environment, with installed dependencies
+
+```bash
   virtualenv [name]
   source /[name]/bin/activate
-python3 phone_calls.py
+  pip install twilio==5.7.0
 ```
-  
+
+You will also need to setup Twilio with an account and add your config file to the directory
+
+```
+  vim config.py
+  //add your twilio phone number, your personal number, the Account SID and Account Token
+```
+
+To execute my program:
+
+```python3
+  python3 phone_calls.py
+```
