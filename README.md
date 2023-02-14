@@ -14,3 +14,11 @@
   except ImportError:
     from cgitb import parse_qs
 ```
+
+# Instructions to run:
+```
+  virtualenv [name]
+  source /[name]/bin/activate
+python3 phone_calls.py
+```
+  
