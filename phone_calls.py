@@ -1,3 +1,4 @@
+import time
 from twilio.rest import TwilioRestClient
 import tokensconfig as tcfg
 
@@ -7,7 +8,8 @@ TWILIO_PHONE_NUMBER = tcfg.from_phone
 
 # list of one or more phone numbers to dial, in "+19732644210" format
 # for now, I have verified my own number for testing, but if you want to make calls,
-# purchase a number for $1.15 a month
+# purchase a number for $1.15 a month and upgrade the account by adding a physical address
+# and adding a credit card to the account. 
 DIAL_NUMBERS = [tcfg.to_phone]
 
 # URL location of TwiML instructions for how to handle the phone call
@@ -16,7 +18,6 @@ TWIML_INSTRUCTIONS_URL = "http://static.fullstackpython.com/phone-calls-python.x
 # replace the placeholder values with your Account SID and Auth Token
 # found on the Twilio Console: https://www.twilio.com/console
 client = TwilioRestClient(tcfg.acct_sid, tcfg.acct_token)
-
 
 def dial_numbers(numbers_list):
   print("Dials one or more phone numbers from a Twilio phone number.")
